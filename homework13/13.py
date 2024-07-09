@@ -1,23 +1,22 @@
 reserved_names = ['root', 'admin', 'developer', 'support']
 username = input("Please enter a valid username: ")
 
-if len(username) >= 5 and len(username) <= 20 and username.isalnum() and username.lower() not in _reserved_names:
+if len(username) >= 5 and len(username) <= 20 and username.isalnum() and username.lower() not in reserved_names:
     print("Username is valid")
-else:
-    else:
-    if len(username) < 5 or len(username) > 20:
-        print("Username should be between 5 and 20 characters long.")
-    if not username.isalnum():
-        print("Username can only contain alphanumeric characters.")
-    if username.lower() in reserved_names:
-        print("Username is a reserved name."
+
+elif len(username) < 5 or len(username) > 20:
+    print("Username should be between 5 and 20 characters long.")
+elif not username.isalnum():
+    print("Username can only contain alphanumeric characters.")
+elif username.lower() in reserved_names:
+    print("Username is a reserved name.")
 
 
 
 email = input("Please enter a valid emeil: ")
 
 if '@' in email and '.' in email:
-    main_part, domain_part = email.split(@, 1)      # splitting as soon as the first @ is met
+    main_part, domain_part = email.split('@', 1)      # splitting as soon as the first @ is met
     
     if main_part and domain_part:
        
@@ -25,9 +24,6 @@ if '@' in email and '.' in email:
             print(f"The email '{email}' is valid.")
         else:
             print(f"The email '{email}' is not valid.")
-
-    else:
-        print(f"The email '{email}' is not  valid.")
 
 else:
     print(f"The email '{email}' is not valid.")
@@ -65,7 +61,7 @@ if password_repeat == password:
     for char in password:
         if 'a' <= char <= 'z':      #or built-in methods (islower,isdigit,isupper)
             has_lower = True
-         elif 'A' <= char <= 'Z':
+        elif 'A' <= char <= 'Z':
             has_upper = True
         elif '0' <= char <= '9':
             has_digit = True
@@ -76,7 +72,7 @@ if password_repeat == password:
         print("Valid password")
 
     else:
-        prrint("Invalid passsword: Password must contain at least one uppercase letter, one lowercase letter, one digit, and one special character (e.g., !@#$%^&*).") 
+        print("Invalid passsword: Password must contain at least one uppercase letter, one lowercase letter, one digit, and one special character (e.g., !@#$%^&*).") 
 
 else:
     print("Passwords do not match. Try again.")
