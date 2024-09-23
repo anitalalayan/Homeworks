@@ -74,7 +74,7 @@ class Fraction:
 
     def __le__(self, other) -> bool:
         other = self.custom_validator(other)
-        return self.numerator * other.denominator <= other.numerator * self.denominator
+        return self.__lt__(other) or self.__eq__(other)
 
     def __gt__(self, other) -> bool:
         other = self.custom_validator(other)
@@ -82,7 +82,8 @@ class Fraction:
 
     def __ge__(self, other) -> bool:
         other = self.custom_validator(other)
-        return self.numerator * other.denominator >= other.numerator * self.denominator
+        return self.__gt__(other) or self.__eq__(other)
+
 
     def __hash__(self)->int:
         return hash((self.numerator, self.denominator))
@@ -135,3 +136,5 @@ if __name__ == "__main__":
     print(mixed)
     fraction1 += fraction2
     print(fraction1)
+
+    print(fraction1 >= fraction2)
