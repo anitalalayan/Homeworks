@@ -1,0 +1,42 @@
+
+# Ignore Python cache files
+__pycache__/
+*.py[cod]
+*.pyo
+
+
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore log files and temporary files
+*.log
+*.tmp
+*.temp
+*.swp
+
+# Ignore macOS files
+.DS_Store
+
+# Ignore coverage reports
+coverage/
+*.cover
+*.coverage
+*.cov
+*.lcov
+
+# Ignore test and debug output
+*.out
+*.err
+
+# Ignore compiled files
+*.o
+*.so
+*.a
+*.pyc
+
+# Ignore database files
+*.db
+*.sqlite3
+
+
