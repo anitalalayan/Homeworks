@@ -1,6 +1,3 @@
-from xml.dom import NotFoundErr
-
-from click import FileError
 from fastapi import FastAPI, HTTPException
 import aiofiles
 import asyncio
@@ -8,7 +5,6 @@ import json
 import os
 from dotenv import load_dotenv
 from errors import *
-from pydantic import ValidationError
 
 USERS_FILE = os.getenv("USERS_FILE", "users.json")
 TASKS_FILE = os.getenv("TASKS_FILE", "tasks.json")
