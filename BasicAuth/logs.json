@@ -1,0 +1,26 @@
+[
+  {
+    "timestamp": "2024-12-10T22:30:06.660158",
+    "event_type": "register",
+    "username": "user",
+    "status": "Failed"
+  },
+  {
+    "timestamp": "2024-12-10T22:30:21.916882",
+    "event_type": "register",
+    "username": "henry",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2024-12-10T22:30:29.839095",
+    "event_type": "login",
+    "username": "henry",
+    "status": "Success"
+  },
+  {
+    "timestamp": "2024-12-10T22:30:29.845376",
+    "event_type": "secure_page_access",
+    "username": "henry",
+    "status": "Success"
+  }
+]

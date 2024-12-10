@@ -1,0 +1,10 @@
+{
+  "user": {
+    "username": "user",
+    "password": "$5$rounds=535000$b0F2ue7CHxXC7uZn$ireg7iquIXnU5P9x5D46Ogc5XDltTy1yJ45zzztOCOD"
+  },
+  "henry": {
+    "username": "henry",
+    "password": "$5$rounds=535000$b6Ns/buNz73kJL./$DdmZKwJ.fS8I39RBVWdv4lOXmfbt/Z.XzZZmCXdVQRA"
+  }
+}
