@@ -1,3 +1,7 @@
+"""
+This module provides a simple and effective way to manage application logs
+by storing them in a JSON file."""
+
 import os
 import json
 from datetime import datetime
@@ -5,13 +9,13 @@ from datetime import datetime
 def initialize_logs_file(file_path):
     """Ensure the logs file exists and is initialized properly."""
     if not os.path.exists(file_path):
-        with open(file_path, "w") as f:
+        with open(file_path, "w", encoding='utf-8') as f:
             json.dump([], f)
 
 def write_logs(file_path, logs):
     """Write logs to the specified file in append mode."""
     try:
-        with open(file_path, 'w') as f:
+        with open(file_path, 'w', encoding='utf-8') as f:
             json.dump(logs, f, indent=2)
     except IOError as e:
         print(f"Error writing to log file {file_path}: {e}")
@@ -21,13 +25,14 @@ def read_logs(file_path):
     if not os.path.exists(file_path):
         return []
     try:
-        with open(file_path, 'r') as f:
+        with open(file_path, 'r', encoding='utf-8') as f:
             return json.load(f)
     except (json.JSONDecodeError, IOError) as e:
         print(f"Error reading from log file {file_path}: {e}")
         return []
 
 class Logs:
+    """ Creating class to store logs """
     def __init__(self, log_file='logs.json'):
         """Initialize the Logs manager."""
         self.log_file = log_file
